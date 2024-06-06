@@ -4,9 +4,14 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     background-color: #f4f2c7; /* Light yellow for body background */
 }
-nav{
-    margin-bottom: 40px;
+.gap{
+    max-width: 100%;
+    background-color:#f4f2c7;
+    margin: 0;
+    padding: 0;
+    height: 40px;
 }
+
 
 img { 
     max-width: 100%; 
