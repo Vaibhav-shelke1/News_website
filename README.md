@@ -63,5 +63,3 @@ Feel free to contribute and make this project even better! If you have any issue
 
 Happy Coding! 🎉
 ```
-
-This README file includes decorative elements like emojis to make it more engaging and user-friendly.
