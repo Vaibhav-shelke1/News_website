@@ -11,7 +11,6 @@ newsRouter.get("/", async (req, res) => {
     try {
         const url = `${common_url}top-headlines?country=in&${apiKey}`;
         const news_get = await axios.get(url);
-        console.log(news_get.data.articles);
         res.render("news", { articles: news_get.data.articles });
     } catch (err) {
         if (err.response) {
