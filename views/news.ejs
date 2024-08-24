@@ -10,16 +10,17 @@
 <div class="wrapper">
     <div class="news">
         <% articles.forEach(function(article,index){ %>
-            <% if ((typeof article.url=='object') || (typeof article.title=='object') || (typeof article.urlToImage=='object') || (typeof article.content=='object')){ %>
+            <% if ((typeof article.url=='object')){ %>
             <% } else{ %>
                 <a href="<%- article.url %>" target="_blank" class="news__card Hover-effect">
-
+                  <% if(article.urlToImage) {%>
                     <img src="<%- article.urlToImage %>" alt="Image">
+                   <% } %>
                     <h2>
                         <%- article.title %>
                     </h2>
                     <p class="content">
-                        <%- article.content.replace(/<[^>]+>/g, '') %>
+                        <%- article.content ? article.content.replace(/<[^>]+>/g, ''):null %>
                     </p>
                     <br>
                     <p style="margin-bottom: 0px; position: absolute; right: 0; bottom: 0; font-family: ui-monospace;">Updated: <span style="color:red;" ><%- new Date(article.publishedAt.slice(0,10)).toDateString() %>    <%- moment.utc(article.publishedAt).local().format('hh : mm A') %> </span></p>
