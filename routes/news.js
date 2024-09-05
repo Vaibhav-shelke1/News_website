@@ -9,7 +9,7 @@ const apiKey = "apiKey=fc79901190a24c0182c7fe32e6d18267";
 // Route for top headlines
 newsRouter.get("/", async (req, res) => {
     try {
-        const url = `${common_url}top-headlines?country=in&${apiKey}`;
+        const url = `${common_url}top-headlines?country=us&${apiKey}`;
         const news_get = await axios.get(url);
         res.render("news", { articles: news_get.data.articles });
     } catch (err) {
